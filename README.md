@@ -17,30 +17,30 @@ KiCad project files are in this repo.
 
 ## Parts
 
-Both options need the same two BC-250-side connectors:
-
-| Qty | Part | Function | Source |
-|---|---|---|---|
-| 2 | Molex **0447690801**, 8-pos Micro-Fit 3.0 BMI receptacle | Plugs into J2000 / J2001 | [DigiKey](https://www.digikey.com/en/products/detail/molex/0447690801/513218) |
-
-For the PSU-side headers, pick one:
+Pick one option. Both include the two Micro-Fit connectors for the BC-250 side.
 
 ### Option 1: Keyed (preferred)
 
-| Qty | Part | Function | Source |
-|---|---|---|---|
-| 1 | 8-pin PCIe male header, 90°, keyed | Takes a GPU cable | [ModDIY](https://www.moddiy.com/products/2427/8-Pin-Graphics-Card-PCIe-Male-Header-Connector-90-Degree-Angled-Black.html) |
-| 1 | 8-pin EPS male header, 90°, keyed | Takes a CPU cable | [ModDIY](https://www.moddiy.com/products/4298/8-Pin-CPU-EPS-Male-Header-Connector-90-Degree-Angled-Black.html) |
+| Qty | Part | Function | Price | Source |
+|---|---|---|---|---|
+| 2 | Molex **0447690801**, 8-pos Micro-Fit 3.0 BMI receptacle | Plugs into J2000 / J2001 | $4.75 ea ($9.50) | [DigiKey](https://www.digikey.com/en/products/detail/molex/0447690801/513218) |
+| 1 | 8-pin PCIe male header, 90°, keyed | Takes a GPU cable | $1.99 | [ModDIY](https://www.moddiy.com/products/2427/8-Pin-Graphics-Card-PCIe-Male-Header-Connector-90-Degree-Angled-Black.html) |
+| 1 | 8-pin EPS male header, 90°, keyed | Takes a CPU cable | $1.99 | [ModDIY](https://www.moddiy.com/products/4298/8-Pin-CPU-EPS-Male-Header-Connector-90-Degree-Angled-Black.html) |
+
+Parts: $13.48 + shipping from both DigiKey ($4.99) and ModDIY ($9.99) = **~$28.50 total**
 
 Keyed connectors physically block the wrong cable type. Molex doesn't sell these to individuals, so buy from a trusted reseller like ModDIY (avoid the cheap AliExpress ones).
 
 ### Option 2: Unkeyed (cheaper)
 
-| Qty | Part | Function | Source |
-|---|---|---|---|
-| 2 | Molex **0039301080**, Mini-Fit Jr 8-pos male header, 90° | Takes either cable, ~$0.85 each | [DigiKey](https://www.digikey.com/en/products/detail/molex/0039301080/561081) |
+| Qty | Part | Function | Price | Source |
+|---|---|---|---|---|
+| 2 | Molex **0447690801**, 8-pos Micro-Fit 3.0 BMI receptacle | Plugs into J2000 / J2001 | $4.75 ea ($9.50) | [DigiKey](https://www.digikey.com/en/products/detail/molex/0447690801/513218) |
+| 2 | Molex **0039301080**, Mini-Fit Jr 8-pos male header, 90° | Takes either cable | $0.85 ea ($1.70) | [DigiKey](https://www.digikey.com/en/products/detail/molex/0039301080/561081) |
 
-Cheaper mostly because you can combine shipping with the 0447690801 connectors in one DigiKey order instead of also paying for shipping from ModDIY. The catch is below.
+Parts: $11.20 + DigiKey shipping ($4.99) = **~$16.20 total**
+
+Everything comes in one DigiKey order, which is where most of the savings are. The catch is below.
 
 > **⚠️ Never plug a CPU cable into the GPU header or the other way around.** PCIe and EPS pinouts are mirrored, so the wrong cable puts 12V where ground should be. This can kill the board and the PSU. The keyed connectors in Option 1 physically block the wrong cable. The unkeyed ones in Option 2 accept either, so if you go that route, label your headers and double check before powering on.
 
