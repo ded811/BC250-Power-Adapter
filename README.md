@@ -29,20 +29,24 @@ Pick one option. Both include the two Micro-Fit connectors for the BC-250 side.
 
 Parts: $13.48 + shipping from both DigiKey ($4.99) and ModDIY ($9.99) = **~$28.50 total**
 
-Keyed connectors physically block the wrong cable type. Molex doesn't sell these to individuals, so buy from a trusted reseller like ModDIY (avoid the cheap AliExpress ones).
+Keyed connectors physically block the wrong cable type. Molex doesn't sell these to individuals, so buy them from a trusted reseller like ModDIY.
 
-### Option 2: Unkeyed (cheaper)
+### Option 2: Single DigiKey order (cheaper, some caveats)
 
 | Qty | Part | Function | Price | Source |
 |---|---|---|---|---|
 | 2 | Molex **0447690801**, 8-pos Micro-Fit 3.0 BMI receptacle | Plugs into J2000 / J2001 | $4.75 ea ($9.50) | [DigiKey](https://www.digikey.com/en/products/detail/molex/0447690801/513218) |
-| 2 | Molex **0039301080**, Mini-Fit Jr 8-pos male header, 90° | Takes either cable | $0.85 ea ($1.70) | [DigiKey](https://www.digikey.com/en/products/detail/molex/0039301080/561081) |
+| 2 | Molex **0039301080**, Mini-Fit Jr 8-pos male header, 90° | CPU header (see note for GPU) | $0.85 ea ($1.70) | [DigiKey](https://www.digikey.com/en/products/detail/molex/0039301080/561081) |
 
 Parts: $11.20 + DigiKey shipping ($4.99) = **~$16.20 total**
 
-Everything comes in one DigiKey order, which is where most of the savings are. The catch is below.
+**Heads up: the 0039301080 only accepts a CPU (EPS) cable as-is.** Its keying matches EPS housings, but GPU cables have a different key pattern (a plastic bridge between the pin rows) and won't seat. Tested and confirmed. For the GPU header you have three choices:
 
-> **⚠️ Never plug a CPU cable into the GPU header or the other way around.** PCIe and EPS pinouts are mirrored, so the wrong cable puts 12V where ground should be. This can kill the board and the PSU. The keyed connectors in Option 1 physically block the wrong cable. The unkeyed ones in Option 2 accept either, so if you go that route, label your headers and double check before powering on.
+1. **Buy the ModDIY PCIe header** from Option 1 for that position (adds ModDIY shipping, so most of the savings disappear)
+2. **Trim the keying** off a 0039301080 with a hobby knife. The shroud is nylon and cuts easily; take off less than you think, test-fit as you go, and don't nick the pins or the latch wall. A trimmed header accepts **both** cable types, so the warning below applies in full. Do this at your own risk.
+3. **AliExpress GPU headers** [like these](https://www.aliexpress.us/item/2255799861263552.html) exist and can work, but aren't recommended (unknown terminal quality on a high-current part). If you go this route anyway, get the **GPU-8Pin-RA** variant, **NOT the GPU-8Pin-RA-Reversed** one.
+
+> **⚠️ Never plug a CPU cable into the GPU header or the other way around.** PCIe and EPS pinouts are mirrored, so the wrong cable puts 12V where ground should be. This can kill the board and the PSU. The keyed connectors in Option 1 physically block the wrong cable. A trimmed header blocks nothing, so label your headers and double check before powering on.
 
 ---
 
